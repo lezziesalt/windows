@@ -1,4 +1,3 @@
-/* Body as a Windows-style desktop */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,7 +7,6 @@ body {
     overflow: hidden;
 }
 
-/* Header with Comic Sans and rainbow text */
 header {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 32px;
@@ -16,16 +14,24 @@ header {
     text-align: center;
     padding: 15px;
     background: rgba(0,0,0,0.5);
-    color: white;
 }
 
-/* Rainbow text effect */
 header span {
     display: inline-block;
     animation: rainbow 3s linear infinite;
 }
 
-/* Toolbar */
+@keyframes rainbow {
+    0% {color: red;}
+    14% {color: orange;}
+    28% {color: yellow;}
+    42% {color: green;}
+    57% {color: blue;}
+    71% {color: indigo;}
+    85% {color: violet;}
+    100% {color: red;}
+}
+
 .toolbar {
     display: flex;
     padding: 10px;
@@ -49,7 +55,6 @@ header span {
     border-radius: 2px;
 }
 
-/* Buttons for preloaded sites */
 .buttons {
     margin: 5px 0;
 }
@@ -65,7 +70,6 @@ header span {
     border-radius: 2px;
 }
 
-/* Desktop area */
 #desktop {
     position: relative;
     width: 100%;
@@ -73,7 +77,6 @@ header span {
     overflow: hidden;
 }
 
-/* Window styling */
 .window {
     position: absolute;
     width: 400px;
@@ -86,7 +89,6 @@ header span {
     flex-direction: column;
 }
 
-/* Window header */
 .window-header {
     background: #0078d7;
     color: white;
@@ -107,30 +109,8 @@ header span {
     padding: 0 6px;
 }
 
-/* Iframe inside window */
 .window iframe {
     flex: 1;
     border: none;
     width: 100%;
 }
-
-/* Rainbow animation for header letters */
-@keyframes rainbow {
-    0% {color: red;}
-    14% {color: orange;}
-    28% {color: yellow;}
-    42% {color: green;}
-    57% {color: blue;}
-    71% {color: indigo;}
-    85% {color: violet;}
-    100% {color: red;}
-}
-
-/* Apply rainbow color to each letter */
-header span:nth-child(1) { color: red; }
-header span:nth-child(2) { color: orange; }
-header span:nth-child(3) { color: yellow; }
-header span:nth-child(4) { color: green; }
-header span:nth-child(5) { color: blue; }
-header span:nth-child(6) { color: indigo; }
-header span:nth-child(7) { color: violet; }
