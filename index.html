@@ -5,13 +5,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>Mini Web Desktop</header>
 
 <div class="toolbar">
   <input id="urlBox" placeholder="Enter URL or search term...">
-  <button onclick="newWindow()">Open</button>
-  <button onclick="saveTabs()">Save Tabs</button>
-  <button onclick="loadTabs()">Load Tabs</button>
+  <button id="openBtn">Open</button>
+</div>
+
+<div class="buttons">
+  <button onclick="openWindow('https://en.wikipedia.org')">Wikipedia</button>
+  <button onclick="openWindow('https://example.com')">Example</button>
 </div>
 
 <div id="desktop"></div>
