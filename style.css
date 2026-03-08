@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #2e2e2e;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background: #3b5998;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.toolbar {
+    display: flex;
+    padding: 10px;
+    background: #444;
+}
+
+.toolbar input {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+}
+
+.toolbar button {
+    padding: 6px 12px;
+    border: none;
+    margin-left: 2px;
+    background: #3b5998;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+#desktop {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px);
+    overflow: hidden;
+}
+
+/* Window Styles */
+.window {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #555;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: move;
+}
+
+.window-header {
+    background: #3b5998;
+    color: white;
+    padding: 5px;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.window-header button {
+    background: #e74c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    padding: 0 6px;
+}
+
+.window iframe {
+    flex: 1;
+    border: none;
+    width: 100%;
+}
